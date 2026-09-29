@@ -6,9 +6,9 @@ This document records the project's stages, changes, decisions, and progress. Ad
 
 ## Current State
 
-- **Stage:** SPIDER internal split and external nnU-Net trainers integrated
+- **Stage:** nnU-Net smoke training and internal full-volume validation completed
 - **Last updated:** 2026-09-30
-- **Status:** Existing Dataset011_SPIDER plans and preprocessing verified; approved internal split installed; external baseline/smoke trainers and W&B safeguards tested. No GPU training, full-volume inference or live W&B run has been started. MedSAM remains a scaffold.
+- **Status:** The five-epoch nnU-Net smoke run completed training and full-volume validation on 71 internal development scans, with mean foreground Dice 0.06561332397992369. Checkpoints and validation metrics are saved. This is a pipeline smoke result; full baseline training remains pending. The 87 official validation scans remain held out. MedSAM remains a scaffold.
 
 ## Stage History
 
@@ -137,6 +137,17 @@ This document records the project's stages, changes, decisions, and progress. Ad
 - **Baseline preserved:** Architecture, loss, optimizer, augmentations, deep supervision and 1000 epochs with 250/50 iterations remain inherited. The separate smoke class uses 5 epochs and 10/5 iterations. Epoch patch Dice/EMA determines best checkpoint selection; full-volume internal validation is separate and local.
 - **Verification:** 28 tests passed, plus real-data split regeneration and idempotence, raw/preprocessed coverage, discovery and CPU construction of both trainers, syntax/import checks and dependency checks. Checkpoint and predictor restoration used synthetic CPU fixtures without training or prediction; W&B initialization/logging was mocked.
 - **Limits and next step:** GPU memory, actual training/checkpoint recovery, W&B runtime/upload and full-volume inference remain unexecuted. Run the offline smoke command in [the canonical guide](training/nnunet/README.md); inspect its outputs before the baseline. Official validation must not be used for tuning or checkpoint selection.
+
+### Stage 14 - Smoke Training and Full-Volume Validation Completed
+
+- **Date:** 2026-09-30; validation completed at 01:36:21.752065 (run log timestamp).
+- **Experiment:** Dataset011_SPIDER, 3d_fullres, fold 0, trainer nnUNetTrainerSPIDER_5epochs. Resolved settings confirm 5 epochs, 10 training iterations and 5 development-validation iterations per epoch, batch size 2.
+- **Outcome:** The terminal output and saved validation/summary.json agree: mean foreground full-volume validation Dice = **0.06561332397992369** (approximately 0.0656). The summary contains **71 internal development volumes**, drawn from the approved 36-patient development partition.
+- **Per-class full-volume Dice:** Vertebrae (1): 0.19680551894230527; intervertebral discs (2): 0.0000003336493548806311; spinal canal (3): 0.000034119348110884753.
+- **Artifacts:** Saved under Models/nnUNet/nnUNet_results/Dataset011_SPIDER/nnUNetTrainerSPIDER_5epochs__nnUNetPlans__3d_fullres/fold_0/: checkpoint_best.pth, checkpoint_final.pth, progress.png, training log, resolved configuration, and validation/summary.json.
+- **Interpretation:** This establishes successful execution of the short training-to-full-volume-validation pipeline. The low Dice is a smoke-run result, not a trained baseline performance claim. Full-volume Dice is distinct from the epoch-level patch Dice/EMA used for checkpoint selection.
+- **Experimental boundary:** The 87 official validation scans remain excluded from training and model selection. Smoke outputs remain separate from baseline outputs.
+- **Next steps:** Inspect smoke predictions, logs and metric curves before starting the standard 1000-epoch baseline. No training, inference or W&B upload was rerun for this history update.
 
 ## Future Entry Template
 
