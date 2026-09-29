@@ -1,0 +1,19 @@
+{
+  "dataset_id": 11,
+  "configuration": "3d_fullres",
+  "fold": 0,
+  "plans": "nnUNetPlans",
+  "seed": 42,
+  "validation_patient_fraction": 0.2,
+  "split_sha256": "fb035061d24772822fe1185ad5e4efba2f28c8d457ecef9eb8dda762d0d0c60c",
+  "counts": {
+    "train_scans": 289,
+    "val_scans": 71,
+    "train_patients": 143,
+    "val_patients": 36,
+    "official_training_scans": 360,
+    "official_training_patients": 179,
+    "official_validation_scans_excluded": 87,
+    "official_validation_patients_excluded": 39
+  }
+}

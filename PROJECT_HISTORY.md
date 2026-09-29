@@ -6,13 +6,13 @@ This document records the project's stages, changes, decisions, and progress. Ad
 
 ## Current State
 
-- **Stage:** Research project named
-- **Last updated:** 2026-09-29
-- **Status:** Research project title recorded; detailed objectives, requirements, and implementation have not yet been documented.
+- **Stage:** SPIDER internal split and external nnU-Net trainers integrated
+- **Last updated:** 2026-09-30
+- **Status:** Existing Dataset011_SPIDER plans and preprocessing verified; approved internal split installed; external baseline/smoke trainers and W&B safeguards tested. No GPU training, full-volume inference or live W&B run has been started. MedSAM remains a scaffold.
 
 ## Stage History
 
-### Stage 1 — Initial Documentation
+### Stage 1 - Initial Documentation
 
 - **Date:** 2026-09-29
 - **Status:** Documentation initialized
@@ -23,7 +23,7 @@ This document records the project's stages, changes, decisions, and progress. Ad
 - **Open items:** Project objectives, requirements, technology choices, and implementation milestones are not yet recorded.
 - **Next steps:** Document the project objectives and requirements, then record subsequent development stages below.
 
-### Stage 2 — Research Project Named
+### Stage 2 - Research Project Named
 
 - **Date:** 2026-09-29
 - **Status:** Completed (title recorded)
@@ -34,11 +34,115 @@ This document records the project's stages, changes, decisions, and progress. Ad
 - **Open items:** Detailed research questions, datasets, foundation models, quantitative biomarkers, and validation methods remain to be specified.
 - **Next steps:** Document the research objectives and study design.
 
+### Stage 3 - Local Version Control
+
+- **Date:** 2026-09-29
+- **Status:** Completed
+- **Changes:** Initialized the local Git repository on `main` and created the initial documentation commit `19f2428` (`docs: add initial project history`).
+- **Validation:** Initial commit succeeded and the working directory was clean immediately afterward.
+
+### Stage 4 - Research Environments
+
+- **Date:** 2026-09-29
+- **Status:** Completed (setup and smoke checks)
+- **Changes:** Created separate Python 3.11 environments for nnU-Net, original MedSAM, and shared evaluation; saved dependency locks and registered notebook kernels.
+- **Model stacks:** nnU-Net 2.8.1 / PyTorch 2.6 / CUDA 12.4; MedSAM / PyTorch 2.0.1 / CUDA 11.8. Isolated and pinned dependencies to address compatibility issues.
+- **Validation:** All dependency checks passed. Verified GPU operations, a synthetic MedSAM forward pass, MRI handling, surface Dice, and intraclass correlation.
+- **Details:** See [ENVIRONMENTS.md](ENVIRONMENTS.md) for versions, source revision, and usage.
+- **Next steps:** Add datasets and pretrained weights, define the validation protocol, and implement biomarker measurements. Full training and model accuracy remain unvalidated.
+
+### Stage 5 - SPIDER Semantic Mask Preprocessing
+
+- **Date:** 2026-09-29
+- **Status:** Completed (utility and synthetic checks)
+- **Changes:** Added an importable converter and CLI in scripts/preprocess_spider_masks.py, explicit NumPy/SimpleITK dependencies, and SPIDER_PREPROCESSING.md usage documentation.
+- **Behavior:** Merges vertebral and disc instances into four semantic classes, preserves sources, checks destination conflicts, rejects unknown labels, and verifies saved geometry and label storage.
+- **Validation:** Six synthetic tests passed in the nnU-Net environment, covering all label values, saved geometry and compression, naming/order, source preservation, empty input, conflicts, invalid labels, and non-transactional failure behavior. CLI help verified.
+- **Follow-up validation (2026-09-29):** Required scalar 3D masks and exact saved voxel equality. Confirmed the actual script has no Markdown copying artifacts or redundant empty-list assignment. All nine synthetic tests passed, including non-3D/vector rejection and saved voxel corruption detection; CLI help verified.
+- **Limitations at this stage:** Real-data validation was pending (subsequently completed for three masks in Stage 6). Full nnU-Net dataset assembly/training remain unvalidated. Conversion may leave earlier outputs after a later failure.
+
+### Stage 6 - Real SPIDER Preprocessing Validation
+
+- **Date:** 2026-09-29
+- **Status:** Completed (three-volume spot-check)
+- **Validation:** Converted 1_t1, 100_t1, and 100_t2 into SPIDERDataset/semantic_test_masks. Independently verified exact mapping, class voxel counts, uint8 storage, source/MRI geometry, source preservation, and overwrite refusal with unchanged output hashes.
+- **Visual check:** Inspected Slicer 5.12.4 composited sagittal, axial, and coronal overlays for all three cases; no visible global shift or flip.
+- **Details:** See [SPIDER_VALIDATION.md](SPIDER_VALIDATION.md). Numerical reports and overlay images are retained locally under outputs/spider_validation.
+- **Limitations:** Sampled slices only; full-dataset validation, annotation quality assessment, dataset assembly, and training remain pending.
+
+### Stage 7 - nnU-Net Environment Activation Verified
+
+- **Date:** 2026-09-29
+- **Status:** Completed (activation check)
+- **Action:** Activated the existing environment using `. .\.venvs\nnunet\Scripts\Activate.ps1` from the project root.
+- **Validation:** Confirmed that `sys.executable` resolved to `D:\Courses\MD5001\Mini Project\BeyondDice\.venvs\nnunet\Scripts\python.exe`.
+- **Scope:** Activation was verified in the command shell used for this check. Other terminals require their own activation; this does not establish persistent activation in the user's terminal.
+- **Next steps:** Convert and validate the remaining SPIDER masks, assemble the complete nnU-Net dataset, and define the training and evaluation protocol.
+
+### Stage 8 - nnU-Net Launcher Repair
+
+- **Date:** 2026-09-29
+- **Status:** Completed
+- **Reported issue:** nnU-Net command launchers referenced the former Code project path instead of BeyondDice.
+- **Action:** Ran `python -m pip install --force-reinstall --no-deps nnunetv2==2.8.1` using the BeyondDice nnU-Net interpreter to regenerate launchers without reinstalling dependencies.
+- **Validation:** The regenerated `nnUNetv2_plan_and_preprocess.exe -h` exited successfully. `python -m pip check` reported "No broken requirements found."
+- **Outcome:** Environment recreation was unnecessary. Existing environment-variable configuration was not repeated.
+
+### Stage 9 - SPIDER Split Dataset Metadata
+
+- **Date:** 2026-09-29
+- **Changes:** Created `Data/nnUNet/nnUNet_raw/split_dataset/dataset.json` for 360 single-channel MRI training cases in `.mha` format; 87 validation cases remain held out.
+- **Labels:** Background 0, vertebrae 1, intervertebral discs 2, spinal canal 3.
+- **Validation:** All training image/mask paths resolved through nnU-Net's loader; no case or patient overlap between splits.
+- **Next steps:** Adopt `DatasetNNN_Name` naming for CLI discovery, run full integrity checks and preprocessing, then configure training. The JSON does not configure the held-out cases as a training validation fold.
+
+### Stage 10 - Model Training Source Layout
+
+- **Date:** 2026-09-29
+- **Changes:** Added `training/nnunet/` and `training/medsam/`, each with data adapters, trainers, and configuration locations; added `training/common/` for shared helpers. Created a root README and model-specific guidance.
+- **Organization:** Existing scripts and datasets remain in place. Documented current `Data/nnUNet/` paths and ignored local data and model weights while keeping training source visible to Git.
+- **Validation:** Scaffold imports passed in both isolated model environments; ignore rules and whitespace checked.
+- **Scope:** Structure only; training entry points, adapters, experiment settings, and model training remain pending.
+
+### Stage 11 - Dataset011 Image Naming Repair
+
+- **Date:** 2026-09-29
+- **Status:** Fixed; training-data integrity check passed.
+- **Current location:** `Models/nnUNet/nnUNet_raw/Dataset011_SPIDER/`. This supersedes the earlier `Data/nnUNet/nnUNet_raw/split_dataset/` layout recorded in Stage 9.
+- **Inconsistency:** The current `dataset.json` declares 360 cases and uses standard folder discovery rather than Stage 9's explicit path mapping. Images in `imagesTr/` lacked the required channel suffix. nnU-Net stripped five characters from each stem, yielding only 33 distinct, truncated case IDs.
+- **Fix:** Renamed all 360 training images from `<case>.mha` to `<case>_0000.mha` after checking destination conflicts and matching labels. For example, `imagesTr/100_t1.mha` became `imagesTr/100_t1_0000.mha`; `labelsTr/100_t1.mha` remained unchanged. Voxel contents and geometry were not modified.
+- **Validation:** nnU-Net detected all 360 cases, and its full training-data integrity check passed using two workers. Twelve image-mask pairs triggered direction-matrix warnings; the largest absolute matrix-entry difference was approximately `1.19e-7`. These warnings were measured, not corrected, and are not an exhaustive visual alignment assessment.
+- **Artifacts:** Rename manifest: `outputs/nnunet11_filename_repair.json`; warning details: `outputs/nnunet11_direction_warnings.json`.
+- **Next steps:** Run `nnUNetv2_plan_and_preprocess -d 11 --verify_dataset_integrity`. Only the standalone integrity check was run during this repair; planning/preprocessing and training remain pending.
+
+### Stage 12 - nnU-Net Planning and Preprocessing Documentation
+
+- **Date:** 2026-09-29
+- **Command:** `nnUNetv2_plan_and_preprocess -d 11 --verify_dataset_integrity`
+- **Why it is needed:** Checks dataset integrity, extracts dataset properties, automatically selects preprocessing and network settings, and prepares resampled/normalized training data for Dataset011_SPIDER.
+- **Confirmed outcome:** The earlier standalone integrity check passed for 360 training cases, with 12 small direction-matrix warnings (Stage 11). The full command's terminal output has not been supplied, so completion of planning/preprocessing and its actual outputs remain unconfirmed. No preprocessing or training command was run for this documentation update.
+- **Expected generated artifacts:** Successful execution writes to `Models/nnUNet/nnUNet_preprocessed/Dataset011_SPIDER/`: `dataset_fingerprint.json` (dataset statistics used for planning), `nnUNetPlans.json` (experiment settings), dataset metadata, and configuration-specific preprocessed images, targets, and case properties. The configurations produced depend on the planner's decisions.
+- **About nnUNetPlans.json:** This is nnU-Net's automatically designed experiment blueprint for SPIDER. It specifies target voxel spacing, resampling and normalization methods, patch size, planned batch size, network architecture, and available configurations. Actual settings must be read from the generated file; the planned batch size still needs runtime validation on the training hardware.
+- **Use in the future pipeline:** Training reads the plans to instantiate the network and load matching preprocessed data. Inference uses the trained model's plans and metadata for consistent preprocessing and restoration of predictions to the original image space. This command does not train a model or create trained checkpoints. Cross-validation splits are generally established during training unless supplied beforehand.
+- **Pending record:** Confirm completion, generated configurations, target spacing, patch sizes, batch sizes, and any additional warnings from the terminal output or saved artifacts before marking preprocessing complete.
+
+### Stage 13 - Internal Split and External SPIDER Trainers
+
+- **Date:** 2026-09-30
+- **Environment:** Verified existing nnunet interpreter, nnunetv2 2.8.1, torch 2.6.0+cu124 and CUDA on RTX 2000 Ada. Added wandb 0.30.0 under existing version constraints; no existing dependency versions changed and pip check passed.
+- **Preprocessing confirmed:** Located Dataset011_SPIDER in Models/nnUNet. Existing plans and 2d, 3d_lowres and 3d_fullres data each cover all 360 official training cases. No preprocessing was repeated. The 3d_fullres plan uses batch size 2, patch [64, 192, 192], spacing approximately [0.6373272, 0.6373172, 0.625].
+- **Split:** Independently reproduced the supplied seed-42 SHA256 patient holdout from local overview.csv: 289 scans/143 patients for internal training, 71 scans/36 patients for development validation. All 87 official validation scans/39 patients are excluded. Numeric patient prefixes and all three sequence suffixes were verified, with no duplicate cases, missing pairs or patient overlap. Installed the exact split and provenance report under the preprocessed dataset; identical reruns are accepted. No prior split or dependent training checkpoints existed.
+- **Integration:** Canonical code is in training/nnunet/data/spider_split.py, trainers/nnUNetTrainerSPIDER.py, configs/spider_baseline.json and verify_setup.py. scripts/setup_nnunet.ps1 configures external trainer discovery and Windows execution settings. Original supplied files and the retired metadata writer are preserved under outputs/integration_archive.
+- **Corrections:** Replaced unavailable W&B generate_id API; added strict split/design checks, run identity and resume guards, JSON-safe metrics, privacy allowlists, disabled automatic console/code/metadata capture, and failure cleanup. Explicitly restrict checkpoint loading to filenames because installed 2.8.1 has a broken dictionary overload. Replaced globally monkeypatched draft tests with installed-API regression tests. Updated stale mask tests to the current .mha output format without changing converter behavior.
+- **Baseline preserved:** Architecture, loss, optimizer, augmentations, deep supervision and 1000 epochs with 250/50 iterations remain inherited. The separate smoke class uses 5 epochs and 10/5 iterations. Epoch patch Dice/EMA determines best checkpoint selection; full-volume internal validation is separate and local.
+- **Verification:** 28 tests passed, plus real-data split regeneration and idempotence, raw/preprocessed coverage, discovery and CPU construction of both trainers, syntax/import checks and dependency checks. Checkpoint and predictor restoration used synthetic CPU fixtures without training or prediction; W&B initialization/logging was mocked.
+- **Limits and next step:** GPU memory, actual training/checkpoint recovery, W&B runtime/upload and full-volume inference remain unexecuted. Run the offline smoke command in [the canonical guide](training/nnunet/README.md); inspect its outputs before the baseline. Official validation must not be used for tuning or checkpoint selection.
+
 ## Future Entry Template
 
 Copy this template into **Stage History** for each new stage, in chronological order. Update **Current State** to reflect the latest stage. Use the actual date of each change; do not infer dates for undocumented work.
 
-### Stage N — Stage Name
+### Stage N - Stage Name
 
 - **Date:** YYYY-MM-DD
 - **Status:** Planned / In progress / Completed / Blocked

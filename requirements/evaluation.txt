@@ -1,0 +1,17 @@
+numpy
+scipy
+pandas==2.2.3
+scikit-image
+scikit-learn
+SimpleITK
+nibabel
+pydicom
+matplotlib
+seaborn
+statsmodels
+pingouin==0.5.5
+surface-distance
+openpyxl
+jupyterlab
+ipykernel
+tqdm

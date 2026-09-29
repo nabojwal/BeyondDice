@@ -1,0 +1,8 @@
+-c nnunet-constraints.txt
+nnunetv2==2.8.1
+ipykernel
+jupyterlab
+pydicom
+SimpleITK
+numpy
+wandb==0.30.0
