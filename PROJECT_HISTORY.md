@@ -6,9 +6,9 @@ This document records the project's stages, changes, decisions, and progress. Ad
 
 ## Current State
 
-- **Stage:** nnU-Net smoke training and internal full-volume validation completed
-- **Last updated:** 2026-09-30
-- **Status:** The five-epoch nnU-Net smoke run completed training and full-volume validation on 71 internal development scans, with mean foreground Dice 0.06561332397992369. Checkpoints and validation metrics are saved. This is a pipeline smoke result; full baseline training remains pending. The 87 official validation scans remain held out. MedSAM remains a scaffold.
+- **Stage:** Full nnU-Net baseline stopped after completed epoch index 522
+- **Last updated:** 2026-10-01
+- **Status:** The user stopped baseline training after epoch 522. The log confirms zero-based epoch 522 completed and epoch 523 began; completion of epoch 523 is not recorded. Best/latest checkpoints remain local. The planned 1000-epoch run and full-volume baseline validation are incomplete/unconfirmed. The 87 official validation scans remain held out. MedSAM remains a scaffold.
 
 ## Stage History
 
@@ -148,6 +148,59 @@ This document records the project's stages, changes, decisions, and progress. Ad
 - **Interpretation:** This establishes successful execution of the short training-to-full-volume-validation pipeline. The low Dice is a smoke-run result, not a trained baseline performance claim. Full-volume Dice is distinct from the epoch-level patch Dice/EMA used for checkpoint selection.
 - **Experimental boundary:** The 87 official validation scans remain excluded from training and model selection. Smoke outputs remain separate from baseline outputs.
 - **Next steps:** Inspect smoke predictions, logs and metric curves before starting the standard 1000-epoch baseline. No training, inference or W&B upload was rerun for this history update.
+
+### Stage 15 - Full Baseline Startup and Resolved Experiment Blueprint
+
+- **Date/source:** 2026-09-30; user-supplied startup output includes timestamp 01:53:41.404340. This entry records that output, not a new training invocation.
+- **Command:** `nnUNetv2_train 11 3d_fullres 0 -tr nnUNetTrainerSPIDER --val_best`.
+- **Startup outcome:** nnU-Net found `nnUNetTrainerSPIDER` through `nnUNet_extTrainer` at `D:/Courses/MD5001/Mini Project/BeyondDice/training/nnunet/trainers` and selected `cuda:0`. The initial message that the trainer was not found in the built-in package is expected fallback behavior; external discovery succeeded.
+- **Upstream plans advisory:** The CLI reports that `nnUNetPlans` uses the older default plans and points to the [upstream residual-encoder preset recommendations](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/resenc_presets.md). This is an informational recommendation, not a startup failure. The current baseline retains the existing `ExperimentPlanner` / `PlainConvUNet` design; no preset migration, architecture change or replanning was performed. Any future residual-encoder comparison should be a separately identified experiment.
+- **Schedule and split:** The integrated baseline inherits 1000 epochs with 250 training and 50 development-validation iterations per epoch. Fold 0 uses 289 training scans/143 patients and 71 internal development scans/36 patients. The 87 official validation scans remain excluded from training and model selection. `--val_best` requests full-volume internal validation using the best checkpoint after training; best-checkpoint selection remains based on EMA foreground patch Dice.
+- **Runtime messages:** `do_dummy_2d_data_aug: False`; pinned-memory loading enabled on device 0 for both loaders. The configured Windows workflow disables compilation; this does not change the planned architecture.
+
+**Resolved 3d_fullres configuration**
+
+| Setting | Recorded value |
+| --- | --- |
+| Data identifier | `nnUNetPlans_3d_fullres` |
+| Preprocessor | `DefaultPreprocessor` |
+| Batch size | `2` |
+| Patch size | `[64, 192, 192]` |
+| Median image size in voxels | `[135.0, 441.0, 448.0]` |
+| Target spacing | `[0.6373272056900671, 0.6373172056900671, 0.625]` in plan axis order |
+| Normalization | `ZScoreNormalization`; `use_mask_for_norm: [False]` |
+| Batch Dice | `True` |
+| Data resampling | `resample_data_or_seg_to_shape`; `is_seg=False`, `order=3` |
+| Segmentation resampling | `resample_data_or_seg_to_shape`; `is_seg=True`, `order=1` |
+| Probability resampling | `resample_data_or_seg_to_shape`; `is_seg=False`, `order=1` |
+| Shared resampling options | `order_z=0`, `force_separate_z=None` |
+
+**Network architecture**
+
+- **Class:** `dynamic_network_architectures.architectures.unet.PlainConvUNet`, using `torch.nn.modules.conv.Conv3d` with convolution bias enabled.
+- **Stages/features:** 6 stages; features `[32, 64, 128, 256, 320, 320]`.
+- **Kernels/strides:** `[3, 3, 3]` kernels at all stages; strides `[[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [1, 2, 2]]`.
+- **Convolutions:** Encoder counts `[2, 2, 2, 2, 2, 2]`; decoder counts `[2, 2, 2, 2, 2]`.
+- **Normalization/activation:** `InstanceNorm3d(eps=1e-5, affine=True)` and `LeakyReLU(inplace=True)`; no dropout (`dropout_op=None`, `dropout_op_kwargs=None`). The plan imports `conv_op`, `norm_op`, `dropout_op` and `nonlin` by their recorded names.
+
+**Global nnUNetPlans.json settings**
+
+- **Dataset/plans:** `Dataset011_SPIDER` / `nnUNetPlans`; planner `ExperimentPlanner`; reader/writer `SimpleITKIO`; label manager `LabelManager`.
+- **Original median geometry after transpose:** Spacing `[3.313382213432355, 0.6373172056900671, 0.625]`; shape `[24, 448, 448]`.
+- **Axis transformations:** `transpose_forward=[2, 0, 1]`; `transpose_backward=[1, 2, 0]`. Shape and spacing vectors above refer to the logged plan axis order.
+- **Foreground intensity statistics, channel 0:** Minimum -1000.0; maximum 3096.0; mean 783.4005126953125; median 639.0; standard deviation 886.1395874023438; 0.5th percentile -863.0; 99.5th percentile 3096.0. These are recorded dataset statistics, not a claim that the MRI channel uses CT normalization or intensity clipping.
+- **Required citation recorded from startup:** Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. *Nature Methods*, 18(2), 203-211.
+- **Status/next record:** Startup/configuration are confirmed by the supplied output; completed epochs, baseline convergence and final full-volume validation metrics are not established by this excerpt. Record those from subsequent logs and saved artifacts. No running process, dataset, plans or training settings were changed for this documentation update.
+
+### Stage 16 - Baseline Training Stopped and Development Checkpoint Saved
+
+- **Date:** 2026-10-01.
+- **User report:** Training was stopped after 522 epochs. The latest baseline log records completed zero-based epoch index 522 (523 epochs if counted from index 0), followed by the start of epoch 523 at 12:57:14.818577; its completion is not recorded.
+- **Experiment:** Dataset011_SPIDER, 3d_fullres, fold 0, nnUNetTrainerSPIDER; planned schedule remains 1000 epochs.
+- **Last completed epoch metrics:** Training loss -0.8351; development patch loss -0.8402; foreground patch Dice: vertebrae 0.9388, intervertebral discs 0.9078, spinal canal 0.9271. New best EMA foreground patch Dice: 0.9225000143051147. These are patch metrics, not full-volume validation results.
+- **Local evidence:** training_log_2026_10_1_00_01_07.txt, checkpoint_best.pth (modified 12:57:14), and checkpoint_latest.pth (modified 11:51:58), under Models/nnUNet/nnUNet_results/Dataset011_SPIDER/nnUNetTrainerSPIDER__nnUNetPlans__3d_fullres/fold_0/. No checkpoint_final.pth was present during inspection. Checkpoint contents were not loaded for this documentation update.
+- **Resume consideration:** The periodic latest checkpoint is older than the best checkpoint. Standard --c prefers latest over best when no final checkpoint exists, so it may resume before the last logged epoch. Inspect the saved epoch before choosing a recovery checkpoint; no checkpoints were renamed or overwritten here.
+- **Scope:** Training was not restarted. Full-volume baseline validation and final performance remain unconfirmed. The official validation set remains excluded from model selection. Source/documentation are committed to Git; datasets, checkpoints and run artifacts remain ignored and local.
 
 ## Future Entry Template
 
