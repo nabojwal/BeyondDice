@@ -6,8 +6,8 @@
 | Original values | Output label | nnU-Net label name |
 | --- | --- | --- |
 | 0 | 0 | background |
-| 1Ã¢â‚¬â€œ25 | 1 | vertebrae (whole vertebrae, including vertebral arches) |
-| 201Ã¢â‚¬â€œ225 | 2 | intervertebral discs |
+| 1-25 | 1 | vertebrae (whole vertebrae, including vertebral arches) |
+| 201-225 | 2 | intervertebral discs |
 | 100 | 3 | spinal canal |
 
 Instance identities are removed in the outputs. Original `.mha` masks are
