@@ -23,3 +23,12 @@ wandb/
 _netrc
 secrets/
 *.key
+# Experiment logs
+/ddp7-smoke-*.log
+
+# Generated evaluation artifacts
+/spider_ddp7_heldout_best/
+/spider_ddp7_heldout_best.zip
+
+# Compressed training archive
+/training/nnunet.zip

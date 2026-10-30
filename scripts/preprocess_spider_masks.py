@@ -1,98 +1,140 @@
-"""Convert SPIDER instance masks into four-class nnU-Net segmentation targets."""
+"""Lossless label-ID encoding for SPIDER; never merges vertebrae or discs."""
 import argparse
-from collections import Counter
+import hashlib
+import json
 from pathlib import Path
-
 import numpy as np
 import SimpleITK as sitk
 
 
-def convert_spider_masks(input_dir, output_dir):
-    """Convert sorted *.mha masks, returning output Paths and reporting labels.
-
-    Original masks are preserved. All destination conflicts are checked before
-    conversion; other failures may leave previously converted masks in place.
-    """
-    input_dir = Path(input_dir)
-    output_dir = Path(output_dir)
-    mask_paths = sorted(input_dir.glob('*.mha'))
-    if not mask_paths:
-        raise FileNotFoundError(f'No *.mha files found in {input_dir}')
-
-    # output_paths = [output_dir / f"{p.stem.removesuffix('mask')}.nii.gz"
-    #                 for p in mask_paths]
-
-    output_paths = [output_dir / f"{p.stem.removesuffix('mask')}.mha"
-                    for p in mask_paths]
+def digest(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
 
 
-    counts = Counter(path.resolve() for path in output_paths)
-    duplicates = [path for path, count in counts.items() if count > 1]
-    if duplicates:
-        raise ValueError('Duplicate destination filenames:\n'
-                         + '\n'.join(str(path) for path in duplicates))
-    existing = [path for path in output_paths if path.exists() or path.is_symlink()]
-    if existing:
-        raise FileExistsError(
-            'Conversion stopped to avoid overwriting existing masks:\n'
-            + '\n'.join(str(path) for path in existing)
-            + '\nChoose a new output folder.')
+def read_mask(path):
+    image = sitk.ReadImage(str(path))
+    if image.GetDimension() != 3 or image.GetNumberOfComponentsPerPixel() != 1:
+        raise ValueError(f'Expected scalar 3D mask: {path}')
+    array = sitk.GetArrayFromImage(image)
+    if not np.isfinite(array).all() or not np.equal(array, np.floor(array)).all():
+        raise ValueError(f'Noninteger/nonfinite mask: {path}')
+    if array.min() < 0 or array.max() > 65535:
+        raise ValueError(f'Mask outside uint16 range: {path}')
+    return image, array.astype(np.uint16)
 
-    output_dir.mkdir(parents=True, exist_ok=True)
-    for mask_path, output_path in zip(mask_paths, output_paths):
-        image = sitk.ReadImage(str(mask_path))
-        if image.GetDimension() != 3:
-            raise ValueError(f'{mask_path.name}: expected a 3D mask')
-        if image.GetNumberOfComponentsPerPixel() != 1:
-            raise ValueError(f'{mask_path.name}: expected a scalar mask')
-        mask = sitk.GetArrayFromImage(image)
-        vertebrae = np.isin(mask, np.arange(1, 26))
-        discs = np.isin(mask, np.arange(201, 226))
-        canal = mask == 100
-        valid = (mask == 0) | vertebrae | discs | canal
-        if not np.all(valid):
-            raise ValueError(f'{mask_path.name}: unexpected labels '
-                             f'{np.unique(mask[~valid]).tolist()}')
-        semantic = np.zeros(mask.shape, dtype=np.uint8)
-        semantic[vertebrae] = 1
-        semantic[discs] = 2
-        semantic[canal] = 3
-        result = sitk.GetImageFromArray(semantic, isVector=False)
-        result.CopyInformation(image)
-        sitk.WriteImage(result, str(output_path), True)
 
-        saved = sitk.ReadImage(str(output_path))
-        saved_array = sitk.GetArrayFromImage(saved)
-        labels = np.unique(saved_array)
-        if not np.array_equal(saved_array, semantic):
-            raise ValueError(
-                f'{output_path.name}: saved voxel labels differ from conversion')
-        geometry_matches = saved.GetSize() == image.GetSize() and all(
-            np.allclose(source, actual, rtol=1e-6, atol=1e-5)
-            for source, actual in [
-                (image.GetSpacing(), saved.GetSpacing()),
-                (image.GetOrigin(), saved.GetOrigin()),
-                (image.GetDirection(), saved.GetDirection())])
-        if not geometry_matches:
-            raise ValueError(f'{output_path.name}: saved geometry differs from source')
-        if saved.GetPixelID() != sitk.sitkUInt8 or not np.all(np.isin(labels, [0, 1, 2, 3])):
-            raise ValueError(f'{output_path.name}: invalid saved dtype or labels')
-        print(f'{output_path.name}: labels {labels.tolist()}')
-    return output_paths
+def label_name(value):
+    if value == 0:
+        return 'background'
+    if 1 <= value < 100:
+        return f'vertebra_{value}'
+    if value == 100:
+        return 'spinal_canal'
+    if 201 <= value <= 65535:
+        return f'disc_{value}'
+    raise ValueError(f'Unrecognized source label {value}; check annotation schema')
+
+
+def fit_mapping(paths):
+    values = {0}
+    for path in paths:
+        _, array = read_mask(path)
+        values.update(map(int, np.unique(array)))
+    if len(values) < 2:
+        raise ValueError('No foreground in training masks')
+    labels = {label_name(value): index for index, value in enumerate(sorted(values))}
+    payload = {'schema_version': 1, 'source_to_encoded': {str(v): i for i, v in enumerate(sorted(values))},
+               'labels': labels, 'fitted_on': 'TrainData only'}
+    payload['sha256'] = digest(payload)
+    return payload
+
+
+def validate_mapping(mapping):
+    payload = {k: v for k, v in mapping.items() if k != 'sha256'}
+    if digest(payload) != mapping['sha256']:
+        raise ValueError('Label mapping hash mismatch')
+    forward = {int(k): int(v) for k, v in mapping['source_to_encoded'].items()}
+    if forward.get(0) != 0 or sorted(forward.values()) != list(range(len(forward))):
+        raise ValueError('Mapping must be one-to-one, consecutive, and preserve background')
+    if {label_name(k): v for k, v in forward.items()} != mapping['labels']:
+        raise ValueError('Mapping names disagree')
+    return forward
+
+
+def convert_mask(source, destination, mapping, inverse=False):
+    forward = validate_mapping(mapping)
+    table = {v: k for k, v in forward.items()} if inverse else forward
+    image, array = read_mask(source)
+    unknown = set(map(int, np.unique(array))) - table.keys()
+    if unknown:
+        raise ValueError(f'Unknown labels in {source}: {sorted(unknown)}; never map these to background')
+    lookup = np.zeros(65536, dtype=np.uint16)
+    for old, new in table.items():
+        lookup[old] = new
+    output = lookup[array]
+    destination = Path(destination)
+    if destination.exists():
+        raise FileExistsError(destination)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    result = sitk.GetImageFromArray(output)
+    result.CopyInformation(image)
+    sitk.WriteImage(result, str(destination), True)
+    check, check_array = read_mask(destination)
+    if not np.array_equal(check_array, output) or not same_geometry(image, check):
+        raise ValueError(f'Written mask verification failed: {destination}')
+
+
+# def same_geometry(a, b):
+#     return (a.GetSize() == b.GetSize() and
+#             all(np.allclose(x, y, rtol=0, atol=1e-5) for x, y in
+#                 [(a.GetSpacing(), b.GetSpacing()), (a.GetOrigin(), b.GetOrigin()),
+#                  (a.GetDirection(), b.GetDirection())]))
+
+def same_geometry(a, b):
+    """Accept matching grids within 0.001 mm; never modify geometry."""
+    from itertools import product
+
+    if a.GetDimension() != 3 or b.GetDimension() != 3:
+        return False
+    if a.GetSize() != b.GetSize():
+        return False
+
+    # For these affine image grids, corner comparisons capture the
+    # maximum displacement between corresponding voxel centres.
+    for corner in product(*[(0, n - 1) for n in a.GetSize()]):
+        pa = np.asarray(a.TransformIndexToPhysicalPoint(corner))
+        pb = np.asarray(b.TransformIndexToPhysicalPoint(corner))
+        distance = np.linalg.norm(pa - pb)
+        if not np.isfinite(distance) or distance > 0.001:
+            return False
+
+    return True
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--input-dir', required=True, type=Path,
-                        help='Directory containing SPIDER *.mha instance masks')
-    # parser.add_argument('--output-dir', required=True, type=Path,
-    #                     help='Destination for compressed semantic *.nii.gz masks')
-
-    parser.add_argument('--output-dir',required=True,type=Path,
-                        help='Destination for compressed semantic *.mha masks')
-
+    parser.add_argument('--input-dir', required=True, type=Path)
+    parser.add_argument('--output-dir', required=True, type=Path)
+    parser.add_argument('--mapping', required=True, type=Path)
+    parser.add_argument('--fit', action='store_true', help='Fit ONLY on training masks')
+    parser.add_argument('--inverse', action='store_true', help='Restore source IDs in predictions')
     args = parser.parse_args()
-    convert_spider_masks(args.input_dir, args.output_dir)
+    files = sorted(args.input_dir.glob('*.mha'))
+    if not files:
+        parser.error('No .mha masks found')
+    if args.output_dir.exists() or (args.fit and args.mapping.exists()):
+        parser.error('Output/mapping already exists; use a fresh destination')
+    if args.fit and args.inverse:
+        parser.error('--fit and --inverse are incompatible')
+    mapping = fit_mapping(files) if args.fit else json.loads(args.mapping.read_text())
+    validate_mapping(mapping)
+    if args.fit:
+        args.mapping.parent.mkdir(parents=True, exist_ok=True)
+        with args.mapping.open('x') as handle:
+            json.dump(mapping, handle, indent=2)
+    for source in files:
+        convert_mask(source, args.output_dir / source.name, mapping, args.inverse)
+    print(f'Converted {len(files)} masks; originals preserved')
 
 
 if __name__ == '__main__':
