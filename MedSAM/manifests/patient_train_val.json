@@ -1,0 +1,2114 @@
+{
+  "schema_version": 2,
+  "seed": 42,
+  "ratios": [
+    0.8,
+    0.2
+  ],
+  "split_policy": "train_val_only_heldout_test_external",
+  "inventory_sha256": "4e26f80162baedc3a1fea912ca3b43794cc6f6252046bce166b7799b4fabed58",
+  "assignments": {
+    "1": "train",
+    "10": "val",
+    "100": "train",
+    "101": "train",
+    "104": "train",
+    "105": "train",
+    "106": "val",
+    "107": "val",
+    "108": "val",
+    "109": "train",
+    "11": "train",
+    "110": "train",
+    "112": "train",
+    "113": "train",
+    "115": "train",
+    "116": "train",
+    "117": "train",
+    "118": "train",
+    "12": "train",
+    "120": "train",
+    "121": "train",
+    "122": "train",
+    "123": "val",
+    "124": "val",
+    "125": "train",
+    "127": "train",
+    "129": "val",
+    "13": "train",
+    "130": "val",
+    "131": "train",
+    "133": "train",
+    "134": "train",
+    "136": "train",
+    "137": "train",
+    "138": "train",
+    "140": "val",
+    "142": "train",
+    "143": "train",
+    "144": "train",
+    "145": "val",
+    "146": "val",
+    "147": "train",
+    "149": "train",
+    "15": "train",
+    "151": "train",
+    "152": "train",
+    "154": "train",
+    "155": "train",
+    "156": "train",
+    "159": "train",
+    "16": "val",
+    "160": "train",
+    "161": "train",
+    "162": "train",
+    "163": "train",
+    "165": "val",
+    "166": "val",
+    "167": "val",
+    "168": "train",
+    "169": "val",
+    "17": "train",
+    "170": "train",
+    "171": "val",
+    "172": "train",
+    "173": "train",
+    "174": "train",
+    "175": "train",
+    "177": "train",
+    "179": "train",
+    "18": "train",
+    "181": "val",
+    "182": "val",
+    "183": "train",
+    "184": "train",
+    "185": "train",
+    "186": "train",
+    "187": "train",
+    "188": "train",
+    "189": "train",
+    "19": "train",
+    "190": "train",
+    "191": "train",
+    "192": "train",
+    "193": "train",
+    "195": "train",
+    "196": "train",
+    "197": "train",
+    "198": "val",
+    "2": "train",
+    "20": "train",
+    "200": "train",
+    "201": "train",
+    "202": "train",
+    "203": "train",
+    "204": "train",
+    "205": "train",
+    "207": "train",
+    "208": "train",
+    "209": "train",
+    "21": "train",
+    "210": "train",
+    "212": "train",
+    "213": "train",
+    "214": "train",
+    "215": "train",
+    "217": "train",
+    "218": "train",
+    "22": "val",
+    "220": "val",
+    "221": "train",
+    "222": "train",
+    "223": "train",
+    "224": "train",
+    "225": "train",
+    "226": "val",
+    "227": "train",
+    "228": "train",
+    "229": "train",
+    "23": "train",
+    "231": "train",
+    "232": "train",
+    "233": "train",
+    "234": "train",
+    "236": "train",
+    "237": "train",
+    "239": "train",
+    "24": "train",
+    "241": "train",
+    "242": "train",
+    "243": "val",
+    "244": "train",
+    "245": "train",
+    "246": "train",
+    "249": "train",
+    "25": "train",
+    "250": "train",
+    "251": "train",
+    "252": "train",
+    "253": "train",
+    "254": "val",
+    "255": "train",
+    "256": "train",
+    "257": "train",
+    "28": "val",
+    "29": "train",
+    "3": "train",
+    "30": "train",
+    "31": "train",
+    "32": "train",
+    "33": "train",
+    "34": "val",
+    "35": "val",
+    "36": "train",
+    "37": "train",
+    "38": "val",
+    "39": "train",
+    "4": "train",
+    "40": "train",
+    "42": "train",
+    "44": "train",
+    "45": "train",
+    "47": "train",
+    "48": "train",
+    "5": "val",
+    "50": "train",
+    "51": "train",
+    "52": "val",
+    "53": "train",
+    "55": "train",
+    "56": "train",
+    "57": "train",
+    "58": "train",
+    "59": "train",
+    "6": "val",
+    "60": "train",
+    "61": "val",
+    "62": "train",
+    "63": "train",
+    "64": "train",
+    "65": "val",
+    "66": "train",
+    "67": "train",
+    "68": "train",
+    "69": "val",
+    "7": "train",
+    "71": "train",
+    "73": "train",
+    "74": "train",
+    "75": "val",
+    "78": "val",
+    "8": "val",
+    "80": "train",
+    "81": "train",
+    "82": "train",
+    "83": "val",
+    "85": "train",
+    "86": "train",
+    "87": "val",
+    "88": "train",
+    "89": "train",
+    "9": "train",
+    "90": "train",
+    "91": "train",
+    "93": "train",
+    "94": "train",
+    "95": "train",
+    "96": "val",
+    "97": "val",
+    "98": "train",
+    "99": "train"
+  },
+  "series": [
+    {
+      "patient_id": "100",
+      "series_id": "100_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\100_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\100_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "101",
+      "series_id": "101_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\101_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\101_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "104",
+      "series_id": "104_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\104_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\104_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "105",
+      "series_id": "105_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\105_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\105_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "106",
+      "series_id": "106_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\106_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\106_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "107",
+      "series_id": "107_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\107_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\107_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "108",
+      "series_id": "108_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\108_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\108_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "109",
+      "series_id": "109_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\109_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\109_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "10",
+      "series_id": "10_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\10_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\10_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "110",
+      "series_id": "110_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\110_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\110_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "112",
+      "series_id": "112_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\112_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\112_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "113",
+      "series_id": "113_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\113_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\113_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "115",
+      "series_id": "115_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\115_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\115_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "116",
+      "series_id": "116_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\116_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\116_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "117",
+      "series_id": "117_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\117_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\117_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "118",
+      "series_id": "118_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\118_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\118_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "11",
+      "series_id": "11_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\11_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\11_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "120",
+      "series_id": "120_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\120_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\120_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "121",
+      "series_id": "121_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\121_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\121_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "122",
+      "series_id": "122_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\122_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\122_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "123",
+      "series_id": "123_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\123_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\123_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "124",
+      "series_id": "124_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\124_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\124_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "125",
+      "series_id": "125_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\125_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\125_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "127",
+      "series_id": "127_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\127_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\127_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "129",
+      "series_id": "129_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\129_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\129_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "12",
+      "series_id": "12_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\12_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\12_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "130",
+      "series_id": "130_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\130_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\130_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "131",
+      "series_id": "131_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\131_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\131_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "133",
+      "series_id": "133_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\133_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\133_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "134",
+      "series_id": "134_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\134_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\134_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "136",
+      "series_id": "136_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\136_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\136_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "137",
+      "series_id": "137_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\137_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\137_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "138",
+      "series_id": "138_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\138_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\138_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "13",
+      "series_id": "13_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\13_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\13_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "140",
+      "series_id": "140_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\140_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\140_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "142",
+      "series_id": "142_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\142_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\142_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "143",
+      "series_id": "143_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\143_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\143_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "144",
+      "series_id": "144_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\144_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\144_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "145",
+      "series_id": "145_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\145_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\145_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "146",
+      "series_id": "146_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\146_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\146_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "147",
+      "series_id": "147_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\147_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\147_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "149",
+      "series_id": "149_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\149_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\149_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "151",
+      "series_id": "151_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\151_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\151_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "152",
+      "series_id": "152_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\152_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\152_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "154",
+      "series_id": "154_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\154_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\154_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "155",
+      "series_id": "155_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\155_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\155_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "156",
+      "series_id": "156_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\156_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\156_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "159",
+      "series_id": "159_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\159_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\159_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "15",
+      "series_id": "15_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\15_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\15_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "160",
+      "series_id": "160_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\160_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\160_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "161",
+      "series_id": "161_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\161_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\161_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "162",
+      "series_id": "162_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\162_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\162_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "163",
+      "series_id": "163_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\163_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\163_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "165",
+      "series_id": "165_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\165_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\165_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "166",
+      "series_id": "166_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\166_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\166_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "167",
+      "series_id": "167_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\167_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\167_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "168",
+      "series_id": "168_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\168_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\168_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "169",
+      "series_id": "169_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\169_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\169_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "16",
+      "series_id": "16_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\16_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\16_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "170",
+      "series_id": "170_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\170_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\170_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "171",
+      "series_id": "171_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\171_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\171_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "172",
+      "series_id": "172_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\172_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\172_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "173",
+      "series_id": "173_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\173_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\173_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "174",
+      "series_id": "174_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\174_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\174_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "175",
+      "series_id": "175_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\175_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\175_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "177",
+      "series_id": "177_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\177_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\177_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "179",
+      "series_id": "179_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\179_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\179_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "17",
+      "series_id": "17_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\17_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\17_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "181",
+      "series_id": "181_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\181_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\181_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "182",
+      "series_id": "182_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\182_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\182_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "183",
+      "series_id": "183_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\183_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\183_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "184",
+      "series_id": "184_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\184_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\184_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "185",
+      "series_id": "185_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\185_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\185_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "186",
+      "series_id": "186_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\186_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\186_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "187",
+      "series_id": "187_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\187_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\187_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "188",
+      "series_id": "188_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\188_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\188_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "189",
+      "series_id": "189_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\189_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\189_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "18",
+      "series_id": "18_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\18_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\18_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "190",
+      "series_id": "190_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\190_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\190_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "191",
+      "series_id": "191_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\191_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\191_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "192",
+      "series_id": "192_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\192_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\192_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "193",
+      "series_id": "193_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\193_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\193_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "195",
+      "series_id": "195_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\195_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\195_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "196",
+      "series_id": "196_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\196_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\196_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "197",
+      "series_id": "197_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\197_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\197_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "198",
+      "series_id": "198_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\198_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\198_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "19",
+      "series_id": "19_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\19_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\19_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "1",
+      "series_id": "1_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\1_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\1_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "200",
+      "series_id": "200_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\200_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\200_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "201",
+      "series_id": "201_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\201_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\201_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "202",
+      "series_id": "202_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\202_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\202_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "203",
+      "series_id": "203_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\203_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\203_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "204",
+      "series_id": "204_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\204_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\204_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "205",
+      "series_id": "205_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\205_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\205_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "207",
+      "series_id": "207_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\207_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\207_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "208",
+      "series_id": "208_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\208_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\208_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "209",
+      "series_id": "209_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\209_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\209_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "20",
+      "series_id": "20_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\20_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\20_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "210",
+      "series_id": "210_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\210_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\210_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "212",
+      "series_id": "212_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\212_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\212_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "213",
+      "series_id": "213_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\213_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\213_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "214",
+      "series_id": "214_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\214_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\214_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "215",
+      "series_id": "215_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\215_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\215_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "217",
+      "series_id": "217_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\217_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\217_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "218",
+      "series_id": "218_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\218_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\218_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "21",
+      "series_id": "21_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\21_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\21_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "220",
+      "series_id": "220_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\220_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\220_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "221",
+      "series_id": "221_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\221_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\221_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "222",
+      "series_id": "222_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\222_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\222_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "223",
+      "series_id": "223_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\223_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\223_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "224",
+      "series_id": "224_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\224_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\224_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "225",
+      "series_id": "225_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\225_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\225_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "226",
+      "series_id": "226_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\226_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\226_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "227",
+      "series_id": "227_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\227_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\227_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "228",
+      "series_id": "228_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\228_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\228_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "229",
+      "series_id": "229_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\229_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\229_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "22",
+      "series_id": "22_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\22_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\22_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "231",
+      "series_id": "231_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\231_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\231_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "232",
+      "series_id": "232_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\232_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\232_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "233",
+      "series_id": "233_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\233_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\233_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "234",
+      "series_id": "234_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\234_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\234_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "236",
+      "series_id": "236_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\236_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\236_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "237",
+      "series_id": "237_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\237_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\237_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "239",
+      "series_id": "239_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\239_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\239_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "23",
+      "series_id": "23_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\23_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\23_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "241",
+      "series_id": "241_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\241_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\241_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "242",
+      "series_id": "242_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\242_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\242_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "243",
+      "series_id": "243_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\243_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\243_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "244",
+      "series_id": "244_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\244_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\244_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "245",
+      "series_id": "245_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\245_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\245_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "246",
+      "series_id": "246_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\246_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\246_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "249",
+      "series_id": "249_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\249_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\249_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "24",
+      "series_id": "24_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\24_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\24_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "250",
+      "series_id": "250_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\250_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\250_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "251",
+      "series_id": "251_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\251_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\251_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "252",
+      "series_id": "252_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\252_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\252_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "253",
+      "series_id": "253_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\253_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\253_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "254",
+      "series_id": "254_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\254_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\254_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "255",
+      "series_id": "255_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\255_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\255_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "256",
+      "series_id": "256_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\256_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\256_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "257",
+      "series_id": "257_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\257_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\257_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "25",
+      "series_id": "25_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\25_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\25_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "28",
+      "series_id": "28_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\28_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\28_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "29",
+      "series_id": "29_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\29_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\29_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "2",
+      "series_id": "2_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\2_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\2_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "30",
+      "series_id": "30_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\30_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\30_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "31",
+      "series_id": "31_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\31_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\31_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "32",
+      "series_id": "32_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\32_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\32_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "33",
+      "series_id": "33_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\33_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\33_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "34",
+      "series_id": "34_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\34_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\34_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "35",
+      "series_id": "35_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\35_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\35_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "36",
+      "series_id": "36_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\36_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\36_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "37",
+      "series_id": "37_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\37_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\37_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "38",
+      "series_id": "38_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\38_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\38_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "39",
+      "series_id": "39_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\39_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\39_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "3",
+      "series_id": "3_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\3_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\3_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "40",
+      "series_id": "40_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\40_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\40_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "42",
+      "series_id": "42_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\42_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\42_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "44",
+      "series_id": "44_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\44_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\44_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "45",
+      "series_id": "45_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\45_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\45_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "47",
+      "series_id": "47_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\47_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\47_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "48",
+      "series_id": "48_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\48_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\48_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "4",
+      "series_id": "4_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\4_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\4_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "50",
+      "series_id": "50_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\50_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\50_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "51",
+      "series_id": "51_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\51_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\51_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "52",
+      "series_id": "52_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\52_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\52_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "53",
+      "series_id": "53_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\53_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\53_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "55",
+      "series_id": "55_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\55_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\55_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "56",
+      "series_id": "56_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\56_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\56_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "57",
+      "series_id": "57_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\57_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\57_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "58",
+      "series_id": "58_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\58_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\58_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "59",
+      "series_id": "59_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\59_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\59_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "5",
+      "series_id": "5_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\5_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\5_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "60",
+      "series_id": "60_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\60_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\60_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "61",
+      "series_id": "61_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\61_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\61_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "62",
+      "series_id": "62_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\62_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\62_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "63",
+      "series_id": "63_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\63_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\63_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "64",
+      "series_id": "64_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\64_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\64_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "65",
+      "series_id": "65_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\65_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\65_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "66",
+      "series_id": "66_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\66_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\66_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "67",
+      "series_id": "67_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\67_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\67_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "68",
+      "series_id": "68_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\68_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\68_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "69",
+      "series_id": "69_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\69_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\69_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "6",
+      "series_id": "6_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\6_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\6_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "71",
+      "series_id": "71_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\71_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\71_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "73",
+      "series_id": "73_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\73_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\73_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "74",
+      "series_id": "74_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\74_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\74_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "75",
+      "series_id": "75_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\75_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\75_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "78",
+      "series_id": "78_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\78_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\78_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "7",
+      "series_id": "7_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\7_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\7_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "80",
+      "series_id": "80_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\80_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\80_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "81",
+      "series_id": "81_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\81_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\81_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "82",
+      "series_id": "82_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\82_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\82_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "83",
+      "series_id": "83_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\83_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\83_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "85",
+      "series_id": "85_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\85_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\85_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "86",
+      "series_id": "86_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\86_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\86_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "87",
+      "series_id": "87_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\87_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\87_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "88",
+      "series_id": "88_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\88_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\88_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "89",
+      "series_id": "89_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\89_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\89_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "8",
+      "series_id": "8_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\8_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\8_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "90",
+      "series_id": "90_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\90_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\90_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "91",
+      "series_id": "91_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\91_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\91_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "93",
+      "series_id": "93_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\93_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\93_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "94",
+      "series_id": "94_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\94_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\94_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "95",
+      "series_id": "95_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\95_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\95_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "96",
+      "series_id": "96_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\96_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\96_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "97",
+      "series_id": "97_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\97_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\97_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "val"
+    },
+    {
+      "patient_id": "98",
+      "series_id": "98_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\98_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\98_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "99",
+      "series_id": "99_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\99_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\99_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    },
+    {
+      "patient_id": "9",
+      "series_id": "9_t2",
+      "image": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\images\\9_t2.mha",
+      "mask": "D:\\Courses\\MD5001\\Mini Project\\MedSAM\\TrainData\\masks\\9_t2.mha",
+      "modality_designation": "t2",
+      "modality_source": "filename",
+      "split": "train"
+    }
+  ]
+}

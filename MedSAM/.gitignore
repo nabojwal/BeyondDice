@@ -1,0 +1,15 @@
+heldout_evaluation/
+bfs_pilot_results/
+*.zip
+*.pth
+*.pt
+*.ckpt
+*.mha
+*.nii
+*.nii.gz
+.venv/
+.venvs/
+__pycache__/
+wandb/
+runs/
+runs_train2/

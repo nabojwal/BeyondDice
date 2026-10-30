@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "source_split_sha256": "4e26f80162baedc3a1fea912ca3b43794cc6f6252046bce166b7799b4fabed58",
+  "source_assignments_sha256": "ec598a2f5678755f8bc0134b55cc4acd9ddfefa3ad3bb11850c7b550595c175e",
+  "seed": 1,
+  "K": 5,
+  "patient_ids": [
+    "231",
+    "215",
+    "73",
+    "125",
+    "90"
+  ],
+  "sampling_unit": "patient",
+  "nested": true
+}
