@@ -1,6 +1,6 @@
 # Project History
 
-**Research project:** Beyond Dice: Quantitative-Biomarker Validation of Foundation-Model Segmentation for Lumbar Spine MRI
+**Research project:** A Comparative Analysis Framework for Segmentation and Biomarker Validation in Lumbar Spine MRI
 
 This document records the project's stages, changes, decisions, and progress. Add an entry whenever the project reaches a milestone or changes direction. Keep older entries so the history remains traceable.
 
