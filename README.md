@@ -13,7 +13,7 @@ See the documentation inside each folder for model-specific setup and execution 
 
 ## Experiment tracking
 
-**[Weights & Biases — Beyond Dice report](https://forge.coreweave.com/wandb/nabojwal_dl1/BeyondDice-SPIDER/reports/Beyond-Dice--VmlldzoxODEzNzQ3Ng)**
+**[Weights & Biases — Beyond Dice report](https://forge.coreweave.com/wandb/nabojwal_dl1/BeyondDice-SPIDER/reports/Beyond-Dice--VmlldzoxODEzNzQ3Ng?accessToken=p7ostrjhvurukghi48vsn7xzubic97w490ljfzpiv91bp8guavzroptrtp9oi2mb)**
 
 
 
