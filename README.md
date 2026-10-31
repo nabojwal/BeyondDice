@@ -17,4 +17,4 @@ See the documentation inside each folder for model-specific setup and execution 
 
 ## License
 
-Original BeyondDice project code is licensed under the [GNU General Public License v3.0 only](LICENSE) (`GPL-3.0-only`), unless otherwise indicated. Third-party components retain their original licenses; the bundled [MedSAM source](MedSAM/MedSAM/LICENSE), for example, is distributed under the Apache License 2.0.
+Original code developed for BeyondDice is distributed under the GNU General Public License version 3.0 only (GPL-3.0-only), subject to the rights of its respective copyright holders. Third-party components, including MedSAM and code derived from other upstream projects, retain their applicable copyright notices, attribution requirements, and licenses. The repository-level license does not supersede those obligations.
