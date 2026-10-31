@@ -13,7 +13,8 @@ See the documentation inside each folder for model-specific setup and execution 
 
 ## Experiment tracking
 
-**[Weights & Biases — Beyond Dice report](https://forge.coreweave.com/wandb/nabojwal_dl1/BeyondDice-SPIDER/reports/Beyond-Dice--VmlldzoxODEzNzQ3Ng?accessToken=p7ostrjhvurukghi48vsn7xzubic97w490ljfzpiv91bp8guavzroptrtp9oi2mb)**
+**[Weights & Biases — Beyond Dice report](https://forge.coreweave.com/wandb/nabojwal_dl1/BeyondDice-SPIDER/reports/Beyond-Dice--VmlldzoxODEzNzQ3Ng)**
 
+## License
 
-
+Original BeyondDice project code is licensed under the [GNU General Public License v3.0 only](LICENSE) (`GPL-3.0-only`), unless otherwise indicated. Third-party components retain their original licenses; the bundled [MedSAM source](MedSAM/MedSAM/LICENSE), for example, is distributed under the Apache License 2.0.
