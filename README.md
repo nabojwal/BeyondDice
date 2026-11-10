@@ -1,7 +1,5 @@
 # Beyond Dice
 
-**A Comparative Analysis Framework for Segmentation and Biomarker Validation in Lumbar Spine MRI**
-
 Research code for comparing **MedSAM** and **nnU-Net** on lumbar spine MRI from the SPIDER dataset, with a focus on segmentation quality and the reliability of downstream intervertebral disc (IVD) measurements.
 
 ## Repository structure
